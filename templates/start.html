@@ -1,0 +1,21 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+
+    <h2>{{ "Minecraft Server" }}</h2>
+
+    {% for name, techname in worlds.items(): %}
+    <form method="get">
+
+    <div class="row">
+        <div class="one column">
+            <input type="hidden" name="server" value="{{ techname }}" />
+            <input type="submit" value="{{ name }}"/></div>
+    </div>
+    </form>
+    {% endfor %}
+    <br />
+    <p>{{ sel_world }}</p>
+    <br />
+
+{% endblock %}
