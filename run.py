@@ -11,3 +11,7 @@ def hello():
     sel_world = request.args.get("server")
 
     return render_template("start.html", worlds=worlds, sel_world=sel_world)
+
+
+if __name__ == '__main__':
+    app.run(debug=False, host='0.0.0.0')
